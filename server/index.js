@@ -22,10 +22,10 @@ mongoose
     "mongodb+srv://pravigyajain7:QRqidiZXI1ifbFbs@cluster0.hemldwe.mongodb.net/?retryWrites=true&w=majority"
   )
   .then(() => {
-    console.log(`mongodb COnnected`);
+    //console.log(`Mongodb Connected`);
   })
   .catch((err) => {
-    console.log(err.message);
+    //console.log(err.message);
   });
 
 app.get("/", (req, res) => {
@@ -45,5 +45,5 @@ app.post("/load/links", loadLinks);
 const port = process.env.PORT || 3001;
 
 app.listen(port, () => {
-  console.log(`Server is running on port ${port}`);
+  //console.log(`Server is running on port ${port}`);
 });

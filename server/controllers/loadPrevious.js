@@ -6,7 +6,7 @@ const loadSocials = async (req, res) => {
   try {
     const decodedTokenMail = jwt_decode(tokenMail, process.env.SECRET_JWT);
     const email = decodedTokenMail.email;
-    console.log(email);
+    //console.log(email);
     const user = await User.findOne({ email: email });
     const socials = user.socialMedia;
     return res.json({ message: "found", socials, status: "success" });
@@ -20,7 +20,7 @@ const loadLinks = async (req, res) => {
   try {
     const decodedTokenMail = jwt_decode(tokenMail, process.env.SECRET_JWT);
     const email = decodedTokenMail.email;
-    console.log(email);
+    //console.log(email);
     const user = await User.findOne({ email: email });
     const links = user.links;
     return res.json({ message: "found", links, status: "success" });

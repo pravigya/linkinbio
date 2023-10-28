@@ -35,10 +35,9 @@ const Apply = () => {
     })
       .then((res) => res.json())
       .then((data) => {
-        console.log(data);
-        console.log(
-          "----------------------------------------------------------------------"
-        );
+        //console.log(data);
+        //console.log(
+
         //3 38
         if (data.status === "success") {
           toast("You are registered successfully");

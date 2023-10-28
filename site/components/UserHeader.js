@@ -31,13 +31,13 @@ const UserHeader = () => {
       .then((data) => {
         if (data.status === "error") return toast.error("Error happened");
         // setData(data.userData);
-        console.log("logging from userHeader", data.userData);
+        //console.log("logging from userHeader", data.userData);
         setUserData(data.userData);
         localStorage.setItem("userHandle", data.userData.handle);
         // toast.success(data.message)
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       });
   }, []);
 

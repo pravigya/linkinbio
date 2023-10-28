@@ -18,13 +18,9 @@ const NavBar = () => {
       <nav className="bg-white border-gray-200 dark:bg-gray-900">
         <div className="max-w-screen-xl flex flex-wrap items-center justify-between mx-auto p-4">
           <Link href="/" className="flex items-center">
-            <img
-              src="/images/favicon.ico"
-              className="h-8 mr-3"
-              alt="Company Logo"
-            />
+            {/* <img src="" className="h-8 mr-3" alt="Company Logo" /> */}
             <span className="self-center text-xl font-semibold whitespace-nowrap dark:text-white">
-              Template
+              Linkinbio
             </span>
           </Link>
           <button

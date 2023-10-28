@@ -29,7 +29,7 @@ const dashboard = () => {
         // toast.success(data.message)
       })
       .catch((err) => {
-        console.log(err);
+        //console.log(err);
       });
   }, []);
 

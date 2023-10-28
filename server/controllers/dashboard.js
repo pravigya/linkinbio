@@ -3,11 +3,11 @@ const jwt_decode = require("jwt-decode");
 
 const dashBoardData = async (req, res) => {
   const { tokenMail } = req.body;
-  console.log(tokenMail);
+  //console.log(tokenMail);
   try {
     const decodedTokenMail = jwt_decode(tokenMail, process.env.SECRET_JWT);
     const email = decodedTokenMail.email;
-    console.log("decoded email", email);
+    //console.log("decoded email", email);
     const user = await User.findOne({ email: email });
     const userData = {
       name: user.name,

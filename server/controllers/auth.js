@@ -3,12 +3,12 @@ const jwt = require("jsonwebtoken");
 
 const registerUser = async (req, res) => {
   const { handle, email, password, category } = req.body;
-  console.log(req.body);
+  //console.log(req.body);
   try {
     const defaultLink = {
-      url: "typefinance.com",
-      title: "TypeFinance",
-      icon: "https://typefinance.com/favicon.ico",
+      url: "",
+      title: "",
+      icon: "",
     };
     const user = await User.create({
       handle,
@@ -18,7 +18,7 @@ const registerUser = async (req, res) => {
       links: [defaultLink],
     });
     const token = jwt.sign({ email: email }, process.env.SECRET_JWT);
-    console.log("user", user);
+    //console.log("user", user);
     return res.json({
       message: "user created",
       status: "success",
@@ -40,7 +40,7 @@ const loginUser = (req, res) => {
   const { email, password } = req.body;
   try {
     const user = User.findOne({ email: email, password: password });
-    console.log(user);
+    //console.log(user);
     if (!user) {
       return res.json({ status: "not found", error: "Invalid credentials" });
     }
