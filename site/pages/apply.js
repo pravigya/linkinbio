@@ -21,7 +21,7 @@ const Apply = () => {
     e.preventDefault();
     if (!category) return toast.error("Add a category");
     // backend part
-    fetch("http://localhost:8080/api/register", {
+    fetch("http://localhost:3001/api/register", {
       method: "POST",
       headers: {
         "content-type": "application/json",
@@ -36,6 +36,10 @@ const Apply = () => {
       .then((res) => res.json())
       .then((data) => {
         console.log(data);
+        console.log(
+          "----------------------------------------------------------------------"
+        );
+        //3 38
         if (data.status === "success") {
           toast("You are registered successfully");
           localStorage.setItem("LinkTreeToken", data.token);
