@@ -1,6 +1,5 @@
 import React, { useState } from "react";
 import styles from "../styles/apply.module.css";
-import Footer from "../components/Footer";
 import { toast } from "react-toastify";
 import Link from "next/link";
 import { useRouter } from "next/router";
@@ -148,7 +147,6 @@ const Apply = () => {
           </h4>
         </div>
       </section>
-      <Footer />
     </>
   );
 };
