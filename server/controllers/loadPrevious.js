@@ -1,10 +1,10 @@
 const User = require("../models/user");
-const jwt_decode = require("jwt-decode");
+const { jwtDecode } = require("jwt-decode");
 
 const loadSocials = async (req, res) => {
   const { tokenMail } = req.body;
   try {
-    const decodedTokenMail = jwt_decode(tokenMail, process.env.SECRET_JWT);
+    const decodedTokenMail = jwtDecode(tokenMail, process.env.SECRET_JWT);
     const email = decodedTokenMail.email;
     //console.log(email);
     const user = await User.findOne({ email: email });
@@ -18,7 +18,7 @@ const loadSocials = async (req, res) => {
 const loadLinks = async (req, res) => {
   const { tokenMail } = req.body;
   try {
-    const decodedTokenMail = jwt_decode(tokenMail, process.env.SECRET_JWT);
+    const decodedTokenMail = jwtDecode(tokenMail, process.env.SECRET_JWT);
     const email = decodedTokenMail.email;
     //console.log(email);
     const user = await User.findOne({ email: email });

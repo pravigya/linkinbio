@@ -13,6 +13,8 @@ const UserHeader = () => {
   };
 
   const { userData, setUserData } = useContext(UserContext);
+  console.log("---------------------------------");
+  console.log(userData);
   const { role, avatar, handle } = userData;
 
   useEffect(() => {
@@ -29,6 +31,7 @@ const UserHeader = () => {
     })
       .then((res) => res.json())
       .then((data) => {
+        console.log(data);
         if (data.status === "error") return toast.error("Error happened");
         // setData(data.userData);
         //console.log("logging from userHeader", data.userData);
@@ -54,7 +57,7 @@ const UserHeader = () => {
           <Link href="/edit/profile">
             <button className="inline-flex w-full md:w-auto px-5 py-3 text-red-500 font-bold hover:text-red-700 hover:bg-red-100 rounded-md mb-3 border-2 border-red-500 md:ml-4">
               <img src="/svg/user.svg" className="w-6 mr-3" />
-              Edit profile
+              Edit Profile
             </button>
           </Link>
         </div>
@@ -63,7 +66,7 @@ const UserHeader = () => {
             <div className="inline-flex mr-5 text-right items-center bg-gray-200 px-5 py-2 rounded-lg">
               <div className="text-xs md:text-md flex flex-col flex-wrap">
                 <span className="font-bold">{handle}</span>
-                <span>{role} Pack</span>
+                <span>{role}</span>
               </div>
               <div className="user-img">
                 <img className="w-10 ml-5 rounded-full" src={avatar} />

@@ -36,12 +36,12 @@ const dashboard = () => {
   return (
     <>
       <div className="">
-        <UserHeader data={data} />
+        <UserHeader />
         <main>
           <section className="grid md:grid-cols-2 xl:grid-cols-4 gap-5">
             <LinkBox
               lbTitle="Links"
-              lbNumber={data.links}
+              //lbNumber={data.links}
               lbSvg="url"
               lbTheme="red"
             />
@@ -51,8 +51,8 @@ const dashboard = () => {
               lbSvg="growth"
               lbTheme="blue"
             />
-            <LinkBox lbTitle="Links" lbNumber="0" lbSvg="email" lbTheme="red" />
-            <LinkBox lbTitle="Growth" lbNumber="0%" lbSvg="ig" lbTheme="blue" />
+            {/* <LinkBox lbTitle="Links" lbNumber="0" lbSvg="email" lbTheme="red" />
+            <LinkBox lbTitle="Growth" lbNumber="0%" lbSvg="ig" lbTheme="blue" /> */}
           </section>
           <section></section>
         </main>

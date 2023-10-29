@@ -98,7 +98,7 @@ const profile = () => {
         <main>
           <section>
             <div>
-              <h4 className="font-bold text-center mb-5">Edit profile</h4>
+              <h4 className="font-bold text-center mb-5">Edit Profile</h4>
               <div>
                 <form
                   onSubmit={saveProfile}
